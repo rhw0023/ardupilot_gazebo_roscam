@@ -38,7 +38,7 @@ wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
 ### Install Gazebo
 ````
 sudo apt-get update
-sudo apt-get install gazebo9
+sudo apt-get install gazebo9 -y
 sudo apt-get install libgazebo9-dev
 ````
 
