@@ -16,6 +16,13 @@ Following are the requirements, setup steps and finally how to of each part..
 * ROS melodic (Required to work with Gazebo)
 * MAVROS
 
+## GIT:
+
+### Install GIT for repository cloning
+````
+sudo apt install git -y
+````
+
 ## Gazebo 9 :
 
 ### Setup your computer to accept software from packages.osrfoundation.org.
