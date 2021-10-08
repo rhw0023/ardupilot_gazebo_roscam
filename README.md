@@ -5,7 +5,7 @@ SITL + ArduPilot + Gazebo + ROS Camera Plugin (Software In Loop Simulation Inter
 
 Finally an all in one tutorial for setting up your virtual drone using Ardupilot (Arducopter) + SITL in an complete 3D virtual enviroment provided by Gazebo.
 
-At last but not least (Actually the most complicated to find examples of...) added the camera plugin from ROS to publish the images so you can take them outside Gazebo and do something with them...
+And last but not least (Actually the most complicated to find examples of...) added the camera plugin from ROS to publish the images so you can take them outside Gazebo and do something with them...
 
 Following are the requirements, setup steps and finally how to of each part.. 
 
@@ -64,20 +64,14 @@ Install ROS with sudo apt install ros-melodic-desktop-full (follow instruction h
 ### Configure your Ubuntu repositories
 ````
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
-
+sudo apt install curl
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 sudo apt update
 ````
 
 ### Install ROS melodic
 ````
-sudo apt install ros-melodic-desktop-full
-````
-
-### Initialize ROS
-````
-sudo rosdep init
-rosdep update
+sudo apt install ros-melodic-desktop-full -y
 ````
 
 ### Environment setup
@@ -88,7 +82,14 @@ source ~/.bashrc
 
 ### Dependencies for building packages
 ````
-sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential
+sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential -y
+sudo apt install python-rosdep
+````
+
+### Initialize ROS
+````
+sudo rosdep init
+rosdep update
 ````
 
 ## MAVROS installation :
