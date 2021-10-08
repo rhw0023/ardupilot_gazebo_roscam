@@ -136,7 +136,7 @@ Instructions taken from ardupilot.org (See original instructions here http://ard
 
 ````
 cd ~/
-git clone https://github.com/r0ch1n/ardupilot
+git clone https://github.com/rhw0023/ardupilot
 cd ardupilot
 git submodule update --init --recursive
 ````
@@ -191,7 +191,7 @@ This concludes the first step SITL Ardupilot installation.
 ````
 cd ~/
 
-git clone https://github.com/r0ch1n/ardupilot_gazebo
+git clone https://github.com/rhw0023/ardupilot_gazebo
 
 cd ardupilot_gazebo
 
@@ -260,7 +260,7 @@ source /opt/ros/melodic/setup.bash
 
 cd ~/
 
-git clone https://github.com/r0ch1n/ardupilot_gazebo_roscam
+git clone https://github.com/rhw0023/ardupilot_gazebo_roscam
 
 cd ardupilot_gazebo_roscam
 
