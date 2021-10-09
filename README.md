@@ -222,7 +222,6 @@ sudo make install
 
 ````
 echo 'source /usr/share/gazebo/setup.sh' >> ~/.bashrc
-
 ````
 
 Set Path of Gazebo Models (Adapt the path to where to clone the repo)
