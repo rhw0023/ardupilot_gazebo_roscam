@@ -119,12 +119,12 @@ sudo ./install_geographiclib_datasets.sh
 
 ### For ease of use on a desktop computer, please also install RQT
 ````
-sudo apt-get install ros-melodic-rqt ros-melodic-rqt-common-plugins ros-melodic-rqt-robot-plugins
+sudo apt-get install ros-melodic-rqt ros-melodic-rqt-common-plugins ros-melodic-rqt-robot-plugins -y
 ````
 
 ### Install catkin tools
 ````
-sudo apt-get install python-catkin-tools
+sudo apt-get install python-catkin-tools -y
 ````
 
 Now that we have everything correctly installed we can begin our system configuration
