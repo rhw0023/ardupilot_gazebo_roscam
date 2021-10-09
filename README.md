@@ -179,7 +179,7 @@ cd ~/ardupilot/ArduCopter
 Then start the simulator using sim_vehicle.py. The first time you run it you should use the -w option to wipe the virtual EEPROM and load the right default parameters for your vehicle.
 
 ````
-sim_vehicle.py --console --map
+sim_vehicle.py --console --map -w
 ````
 
 ### Updating MAVProxy and pymavlink
