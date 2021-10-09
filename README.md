@@ -98,7 +98,7 @@ MAVLink extendable communication node for ROS with proxy for Ground Control Stat
 
 ### Configure your Ubuntu repositories
 ````
-sudo apt-get install ros-melodic-mavros ros-melodic-mavros-extras
+sudo apt-get install ros-melodic-mavros ros-melodic-mavros-extras -y
 
 cd ~/
 
