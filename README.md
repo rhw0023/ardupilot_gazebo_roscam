@@ -38,7 +38,9 @@ wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
 ### Install Gazebo
 ````
 sudo apt-get update
+
 sudo apt-get install gazebo9 -y
+
 sudo apt-get install libgazebo9-dev -y
 ````
 
@@ -64,8 +66,11 @@ Install ROS with sudo apt install ros-melodic-desktop-full (follow instruction h
 ### Configure your Ubuntu repositories
 ````
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+
 sudo apt install curl
+
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+
 sudo apt update
 ````
 
@@ -77,18 +82,21 @@ sudo apt install ros-melodic-desktop-full -y
 ### Environment setup
 ````
 echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+
 source ~/.bashrc
 ````
 
 ### Dependencies for building packages
 ````
 sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential -y
+
 sudo apt install python-rosdep
 ````
 
 ### Initialize ROS
 ````
 sudo rosdep init
+
 rosdep update
 ````
 
@@ -106,7 +114,7 @@ wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/inst
 
 chmod a+x install_geographiclib_datasets.sh
 
-./install_geographiclib_datasets.sh
+sudo ./install_geographiclib_datasets.sh
 ````
 
 ### For ease of use on a desktop computer, please also install RQT
@@ -136,8 +144,11 @@ Instructions taken from ardupilot.org (See original instructions here http://ard
 
 ````
 cd ~/
+
 git clone https://github.com/rhw0023/ardupilot
+
 cd ardupilot
+
 git submodule update --init --recursive
 ````
 
@@ -276,8 +287,11 @@ catkin build
 
 # Add Custom models and plugin to Gazebo
 export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models:$GAZEBO_MODEL_PATH
+
 export GAZEBO_MODEL_PATH=~/ardupilot_gazebo_roscam/src/ardupilot_gazebo/models:$GAZEBO_MODEL_PATH
+
 export GAZEBO_PLUGIN_PATH=/usr/lib/x86_64-linux-gnu/gazebo-9/plugins:$GAZEBO_PLUGIN_PATH 
+
 export GAZEBO_PLUGIN_PATH=/opt/ros/melodic/lib:$GAZEBO_PLUGIN_PATH
 
 # Test installation
@@ -340,8 +354,11 @@ Open one Terminal and launch ROS integrated Gazebo
 source /opt/ros/melodic/setup.bash
 
 export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models:$GAZEBO_MODEL_PATH
+
 export GAZEBO_MODEL_PATH=~/ardupilot_gazebo_roscam/src/ardupilot_gazebo/models:$GAZEBO_MODEL_PATH
+
 export GAZEBO_PLUGIN_PATH=/usr/lib/x86_64-linux-gnu/gazebo-9/plugins:$GAZEBO_PLUGIN_PATH 
+
 export GAZEBO_PLUGIN_PATH=/opt/ros/melodic/lib:$GAZEBO_PLUGIN_PATH
 
 #Launch ROS integrated Gazebo
